@@ -6,4 +6,5 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 project(practice)
 
 add_executable(input_args src/1_input_args/main.cpp)
+add_executable(hello_world src/2_hello_world/main.cpp)
 
