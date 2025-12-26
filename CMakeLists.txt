@@ -17,6 +17,7 @@ set(
   "2_repeated_words"
   "2_type_conversion"
   "2_variable_initialization"
+  "2_miles_kilometers_converter"
 )
 
 foreach(current_project ${PROJECTS})
