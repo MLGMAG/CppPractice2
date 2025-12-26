@@ -11,10 +11,12 @@ set(
   PROJECTS
   "1_input_args"
   "1_hello_world"
+
   "2_name_age"
   "2_int_operations"
   "2_repeated_words"
   "2_type_conversion"
+  "2_variable_initialization"
 )
 
 foreach(current_project ${PROJECTS})
