@@ -14,6 +14,7 @@ set(
   "2_name_age"
   "2_int_operations"
   "2_repeated_words"
+  "2_type_conversion"
 )
 
 foreach(current_project ${PROJECTS})
