@@ -18,6 +18,7 @@ set(
   "2_type_conversion"
   "2_variable_initialization"
   "2_miles_kilometers_converter"
+  "2_two_digits"
 )
 
 foreach(current_project ${PROJECTS})
