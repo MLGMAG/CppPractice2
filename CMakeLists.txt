@@ -20,6 +20,7 @@ set(
   "2_miles_kilometers_converter"
   "2_two_digits"
   "2_number_sort"
+  "2_polish_notation"
 )
 
 foreach(current_project ${PROJECTS})
