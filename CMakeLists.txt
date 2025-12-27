@@ -23,6 +23,7 @@ set(
   "2_polish_notation"
 
   "3_currency_converter"
+  "3_char_table"
 )
 
 foreach(current_project ${PROJECTS})
