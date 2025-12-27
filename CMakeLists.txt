@@ -21,6 +21,8 @@ set(
   "2_two_digits"
   "2_number_sort"
   "2_polish_notation"
+
+  "3_currency_converter"
 )
 
 foreach(current_project ${PROJECTS})
