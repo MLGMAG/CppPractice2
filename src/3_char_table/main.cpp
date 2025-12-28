@@ -2,14 +2,9 @@
 
 int main() {
 
-  int start_index = 97;
-  int end_index = 123;
-  int current_index = start_index;
-
-  while (current_index < end_index) {
-    char c = static_cast<char>(current_index);
-    std::cout << c << "\t" << current_index << "\n";
-    current_index++;
+  for (int i = 48; i < 123; i++) {
+    char c = static_cast<char>(i);
+    std::cout << c << "\t" << i << "\n";
   }
 
   return 0;
