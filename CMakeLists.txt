@@ -24,6 +24,7 @@ set(
 
   "3_currency_converter"
   "3_char_table"
+  "3_square_root"
 )
 
 foreach(current_project ${PROJECTS})
