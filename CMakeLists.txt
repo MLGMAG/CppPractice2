@@ -32,6 +32,7 @@ set(
   "3_distance"
   "3_guessing"
   "3_simple_calculator"
+  "3_number_to_word"
 )
 
 foreach(current_project ${PROJECTS})
