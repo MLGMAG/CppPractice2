@@ -30,6 +30,7 @@ set(
   "3_string_analysis"
   "3_median"
   "3_distance"
+  "3_guessing"
 )
 
 foreach(current_project ${PROJECTS})
