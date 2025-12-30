@@ -35,6 +35,7 @@ set(
   "3_number_to_word"
   "3_word_to_number"
   "3_simple_calculator_v2"
+  "3_rice_and_chess"
 )
 
 foreach(current_project ${PROJECTS})
