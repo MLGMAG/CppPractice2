@@ -27,6 +27,7 @@ set(
   "3_square_root"
   "3_bleeps"
   "3_drill"
+  "3_string_analysis"
 )
 
 foreach(current_project ${PROJECTS})
