@@ -37,6 +37,7 @@ set(
   "3_simple_calculator_v2"
   "3_rice_and_chess"
   "3_rock_paper_scissors"
+  "3_prime_numbers"
 )
 
 foreach(current_project ${PROJECTS})
