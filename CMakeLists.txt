@@ -41,6 +41,7 @@ set(
   "3_sieve_of_eratosthenes"
   "3_n_primes"
   "3_mode"
+  "3_mode_string"
 )
 
 foreach(current_project ${PROJECTS})
