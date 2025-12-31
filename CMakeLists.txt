@@ -38,6 +38,7 @@ set(
   "3_rice_and_chess"
   "3_rock_paper_scissors"
   "3_prime_numbers"
+  "3_sieve_of_eratosthenes"
 )
 
 foreach(current_project ${PROJECTS})
