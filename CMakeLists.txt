@@ -44,6 +44,8 @@ set(
   "3_mode_string"
   "3_quadratic_equation"
   "3_scores"
+
+  "4_drill"
 )
 
 foreach(current_project ${PROJECTS})
