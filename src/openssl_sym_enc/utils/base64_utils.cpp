@@ -4,18 +4,18 @@
 #include <vector>
 #include <stdexcept>
 #include <sstream>
+#include <span>
 
 namespace utils {
 
-std::string base64_encode(const unsigned char *value, const size_t size) {
-
-  const char *data = reinterpret_cast<const char*> (value);
-  size_t result_len = (size + 2) / 3 * 4;
+std::string base64_encode(const std::span<const unsigned char> value) {
+  const char *data = reinterpret_cast<const char*> (value.data());
+  size_t result_len = (value.size() + 2) / 3 * 4;
   std::vector<unsigned char> out(result_len);
 
   size_t actual_result_len = 0;
 
-  ::base64_encode(data, size, reinterpret_cast<char *>(out.data()),
+  ::base64_encode(data, value.size(), reinterpret_cast<char *>(out.data()),
                   &actual_result_len, 0);
 
   if (actual_result_len != result_len) {
@@ -29,7 +29,9 @@ std::string base64_encode(const unsigned char *value, const size_t size) {
 }
 
 std::string base64_encode(const std::string &value) {
-  return base64_encode(reinterpret_cast<const unsigned char *>(value.c_str()), value.size());
+  return base64_encode(std::span{
+      reinterpret_cast<const unsigned char *>(value.c_str()), value.size()});
+
 }
 
 }  // namespace utils

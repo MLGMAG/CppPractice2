@@ -3,6 +3,7 @@
 #include "utils/conversion_utils.hpp"
 #include <cstdlib>
 #include <iostream>
+#include <span>
 #include <string>
 
 
@@ -19,13 +20,15 @@ int main() {
   unsigned char key[utils::KEY_SIZE];
   utils::init_key(password, key, utils::KEY_SIZE, ' ');
 
-  std::cout << "Key base64: " << utils::base64_encode(key, utils::KEY_SIZE) << "\n";
+  std::cout << "Key base64: "
+            << utils::base64_encode(std::span{key, utils::KEY_SIZE}) << "\n";
   std::cout << "Key numbers: " << utils::convert_to_numbers(key, utils::KEY_SIZE) << "\n\n";
 
   unsigned char iv[utils::IV_SIZE];
   utils::init_iv(iv, utils::IV_SIZE);
 
-  std::cout << "IV base64: " << utils::base64_encode(iv, utils::IV_SIZE) << "\n";
+  std::cout << "IV base64: "
+            << utils::base64_encode(std::span{iv, utils::IV_SIZE}) << "\n";
   std::cout << "IV numbers: " << utils::convert_to_numbers(iv, utils::IV_SIZE) << "\n\n";
 
   const std::string input_text = "The quick brown fox jumps over the lazy dog";
@@ -40,7 +43,8 @@ int main() {
   const int cipher_text_size = 128;
   unsigned char cipher_text[cipher_text_size];
   std::cout << "Initial cipher array base64: "
-            << utils::base64_encode(cipher_text, cipher_text_size) << "\n";
+            << utils::base64_encode(std::span{cipher_text, cipher_text_size})
+            << "\n";
   std::cout << "Initial cipher array numbers: "
             << utils::convert_to_numbers(cipher_text, cipher_text_size) << "\n\n";
 
@@ -49,15 +53,15 @@ int main() {
 
   std::cout << "Encrypted length: " << encrypted_length << "\n";
   std::cout << "Encrypted base64: "
-            << utils::base64_encode(cipher_text, cipher_text_size) << "\n";
+            << utils::base64_encode(std::span{cipher_text, cipher_text_size}) << "\n";
   std::cout << "Encrypted numbers: "
             << utils::convert_to_numbers(cipher_text, cipher_text_size) << "\n\n";
 
-  // Decryption
+  // decryption
   const int decrypted_text_size = 128;
   unsigned char decrypted_text[decrypted_text_size];
   std::cout << "Initial decrypted array base64: "
-            << utils::base64_encode(decrypted_text, decrypted_text_size) << "\n";
+            << utils::base64_encode(std::span{decrypted_text, decrypted_text_size}) << "\n";
   std::cout << "Initial decrypted array numbers: "
             << utils::convert_to_numbers(decrypted_text, decrypted_text_size) << "\n\n";
 
@@ -66,7 +70,7 @@ int main() {
 
   std::cout << "Decrypted length: " << decrypted_length << "\n";
   std::cout << "Decrypted base64: "
-            << utils::base64_encode(decrypted_text, decrypted_text_size) << "\n";
+            << utils::base64_encode(std::span{decrypted_text, decrypted_text_size}) << "\n";
   std::cout << "Decrypted numbers: "
             << utils::convert_to_numbers(decrypted_text, decrypted_text_size) << "\n";
 

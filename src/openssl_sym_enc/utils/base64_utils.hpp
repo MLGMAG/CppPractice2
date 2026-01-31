@@ -1,11 +1,11 @@
 #pragma once
 
-#include <cstddef>
 #include <string>
+#include <span>
 
 namespace utils {
 
-std::string base64_encode(const unsigned char *value, const size_t size);
+std::string base64_encode(std::span<const unsigned char> value);
 
 std::string base64_encode(const std::string &value);
 
