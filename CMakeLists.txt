@@ -7,6 +7,9 @@ project(practice)
 
 add_compile_options(-Wall -Wextra -Wpedantic -Werror)
 
+find_package(OpenSSL REQUIRED)
+find_package(base64 REQUIRED)
+
 set(
   PROJECTS
   "1_input_args"
@@ -51,4 +54,14 @@ set(
 foreach(current_project ${PROJECTS})
   add_executable("${current_project}" "src/${current_project}/main.cpp")
 endforeach()
+
+# OpenSSL
+add_executable(
+  "openssl_sym_enc"
+  "src/openssl_sym_enc/main.cpp"
+  "src/openssl_sym_enc/utils/base64_utils.cpp"
+  "src/openssl_sym_enc/utils/conversion_utils.cpp"
+  "src/openssl_sym_enc/utils/openssl_utils.cpp"
+)
+target_link_libraries("openssl_sym_enc" openssl::openssl aklomp::base64)
 

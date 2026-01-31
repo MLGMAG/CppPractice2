@@ -1,2 +1,4 @@
 build
 .projectile-cache.eld
+CMakeUserPresets.json
+
