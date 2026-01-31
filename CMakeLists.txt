@@ -15,6 +15,7 @@ set(
   "1_input_args"
   "1_hello_world"
 
+  "2_char_conversion"
   "2_name_age"
   "2_int_operations"
   "2_repeated_words"
